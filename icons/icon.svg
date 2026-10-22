@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCF7ED" />
+      <stop offset="0.55" stop-color="#F8F1E2" />
+      <stop offset="1" stop-color="#EFE1C9" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0" stop-color="#FFFDF7" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#FFFDF7" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#paper)" />
+  <circle cx="256" cy="248" r="184" fill="url(#glow)" />
+  <circle cx="256" cy="256" r="196" fill="none" stroke="#DCC8A9" stroke-width="2" stroke-dasharray="2 12" stroke-linecap="round" opacity="0.85" />
+  <circle cx="256" cy="256" r="214" fill="none" stroke="#E8D7BD" stroke-width="8" opacity="0.5" />
+  <g fill="#CBB08A" opacity="0.55">
+    <circle cx="104" cy="154" r="4" />
+    <circle cx="410" cy="186" r="5" />
+    <circle cx="382" cy="372" r="4" />
+    <circle cx="128" cy="364" r="5" />
+  </g>
+  <g transform="translate(32 25) scale(7)">
+    <path d="M32 51V32" stroke="#1F6F66" stroke-width="4.5" stroke-linecap="round" />
+    <path d="M32 36c-10 0-15-5.5-15-14 9 0 15 4.5 15 14Z" fill="#1F6F66" />
+    <path d="M32 39c9 0 14-5 14-12.5-8.5 0-14 4-14 12.5Z" fill="#5E9E84" />
+    <circle cx="32" cy="22" r="7" fill="#E25B3F" />
+    <circle cx="32" cy="22" r="2.4" fill="#E7B24B" />
+  </g>
+</svg>

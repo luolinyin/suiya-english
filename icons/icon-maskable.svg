@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FCF7ED" />
+      <stop offset="0.55" stop-color="#F8F1E2" />
+      <stop offset="1" stop-color="#EBDCC2" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.5">
+      <stop offset="0" stop-color="#FFFDF7" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#FFFDF7" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#paper)" />
+  <circle cx="256" cy="248" r="190" fill="url(#glow)" />
+  <g fill="#CBB08A" opacity="0.45">
+    <circle cx="84" cy="128" r="5" />
+    <circle cx="430" cy="150" r="6" />
+    <circle cx="404" cy="402" r="5" />
+    <circle cx="108" cy="390" r="6" />
+  </g>
+  <g transform="translate(76.8 71.2) scale(5.6)">
+    <path d="M32 51V32" stroke="#1F6F66" stroke-width="4.5" stroke-linecap="round" />
+    <path d="M32 36c-10 0-15-5.5-15-14 9 0 15 4.5 15 14Z" fill="#1F6F66" />
+    <path d="M32 39c9 0 14-5 14-12.5-8.5 0-14 4-14 12.5Z" fill="#5E9E84" />
+    <circle cx="32" cy="22" r="7" fill="#E25B3F" />
+    <circle cx="32" cy="22" r="2.4" fill="#E7B24B" />
+  </g>
+</svg>

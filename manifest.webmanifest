@@ -1,0 +1,59 @@
+{
+  "id": "./",
+  "name": "穗芽英语 · 广州三年级同步学",
+  "short_name": "穗芽英语",
+  "description": "雪梨教育出品：广州版三年级英语同步学习，点读核心词、练听说拼写、情景小剧场与间隔复习，装到桌面离线也能学。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#F8F3E8",
+  "theme_color": "#F8F3E8",
+  "categories": ["education", "kids"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "开始学习",
+      "short_name": "学习",
+      "description": "回到今日学习首页",
+      "url": "./?source=pwa#/home",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "复习单词",
+      "short_name": "复习",
+      "description": "按记忆曲线复习到期单词",
+      "url": "./?source=pwa#/review",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
