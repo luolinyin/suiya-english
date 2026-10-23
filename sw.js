@@ -1,14 +1,15 @@
 /* 穗芽英语离线壳：版本号变化时旧缓存会自动清理。 */
-const VERSION = 'v1'
+const VERSION = 'v4'
 const SHELL_CACHE = `suiya-shell-${VERSION}`
 const ASSET_CACHE = `suiya-assets-${VERSION}`
-const MEDIA_CACHE = `suiya-media-${VERSION}`
+const MEDIA_CACHE = 'suiya-media-v1'
 const CACHE_NAMES = new Set([SHELL_CACHE, ASSET_CACHE, MEDIA_CACHE])
 
 const SCOPE = self.registration.scope
 const INDEX_URL = new URL('./index.html', SCOPE).href
 const ROOT_URL = new URL('./', SCOPE).href
 const MANIFEST_URL = new URL('./manifest.webmanifest', SCOPE).href
+const ASSET_LIST_URL = new URL('./asset-manifest.json', SCOPE).href
 const OFFLINE_ICONS = [
   new URL('./icons/icon.svg', SCOPE).href,
   new URL('./icons/icon-192.png', SCOPE).href,
@@ -51,6 +52,18 @@ async function precacheBuildAssets(html, cache) {
   for (const match of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     const url = new URL(match[1], INDEX_URL)
     if (url.href.startsWith(SCOPE)) assetUrls.add(url.href)
+  }
+
+  try {
+    const response = await fetch(ASSET_LIST_URL, { cache: 'reload' })
+    if (response.ok) {
+      const manifest = await response.json()
+      for (const asset of manifest.assets ?? []) {
+        assetUrls.add(new URL(asset, ASSET_LIST_URL).href)
+      }
+    }
+  } catch {
+    /* 资源清单缺失时仍按 HTML 引用的入口缓存 */
   }
 
   await Promise.allSettled([...assetUrls].map((url) => cache.add(url)))
