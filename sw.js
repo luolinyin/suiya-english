@@ -1,5 +1,5 @@
 /* 穗芽英语离线壳：版本号变化时旧缓存会自动清理。 */
-const VERSION = 'v4'
+const VERSION = 'v5'
 const SHELL_CACHE = `suiya-shell-${VERSION}`
 const ASSET_CACHE = `suiya-assets-${VERSION}`
 const MEDIA_CACHE = 'suiya-media-v1'
